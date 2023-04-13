@@ -20,7 +20,7 @@ public class UserController {
     @PostMapping("/save")
 	public ResponseEntity<User> savedetails(@RequestBody User user) {
 		 User u=userService.savedata(user);
-		 System.out.println("conflict kiran ");
+		 System.out.println("conflict kiran_4 ");
 		 return ResponseEntity.ok().body(u);
 		
 	}
