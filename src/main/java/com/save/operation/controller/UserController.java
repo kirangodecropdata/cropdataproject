@@ -21,6 +21,7 @@ public class UserController {
 	public ResponseEntity<User> savedetails(@RequestBody User user) {
 		 User u=userService.savedata(user);
 		 System.out.println("conflict kiran_4 ");
+		 System.out.println("hye thos is kiran");
 		 return ResponseEntity.ok().body(u);
 		
 	}
