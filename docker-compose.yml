@@ -1,0 +1,27 @@
+version: "3"
+#---------------------------------------------------------------------------------------------
+services:
+  springbootapp:
+    container_name: spring-app
+    image: springbootapp
+    restart: always
+    build: .
+    ports:
+      - 8080:8080
+#----------------------------------------------------------------------------------------------   
+    networks:
+      - project1
+    depends_on:
+      - mysqldb
+#---------------------------------------------------------------------------------------------
+  mysqldb:
+    container_name: mysqldb1
+    image: mysql
+    #volumes:
+    #      - E:/JavaIDE/DockerVolume/VolumeProject-1:/var/lib/mysql#
+    ports:
+            - 3307:3306
+    environment:
+            MYSQL_DATABASE: test
+            MYSQL_ROOT_PASSWORD: root
+#----------------------------------------------------------------------------------------------
